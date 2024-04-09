@@ -12,7 +12,7 @@ let db_config = {
 
 switch (environment) {
   case 'test':
-    DATABASE_URL = 'sqlite::memory'
+    DATABASE_URL = 'sqlite::memory' 
     break;
   case 'production':
     db_config.dialectOptions = {
