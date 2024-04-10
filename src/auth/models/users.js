@@ -12,7 +12,7 @@ const userSchema = (sequelize, DataTypes) => {
       type: DataTypes.VIRTUAL,
       get() {
         
-        return jwt.sign({ username: this.username }, process.env.SECRET);
+        return jwt.sign({ username: this.username }, process.env.SECRET, {algorithm: 'HS256', expiresIn: '1h'});
       }
     }
   });
